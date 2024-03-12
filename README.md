@@ -5,9 +5,10 @@ Project untuk UMKM dengan proses developing yang sesuai standar yang baik dan pe
 # Rencana dan Penjadwalan
 
 Waktu pengerjaan 12 Maret - 12 Juni
-20% Planing ( 12 Maret - 31 Maret )
-70% Implement ( 31 Maret - 1 Juni )
-10% Testing ( 1 Juni - 12 Juni )
+
+- 20% Planing ( 12 Maret - 31 Maret )
+- 70% Implement ( 31 Maret - 1 Juni )
+- 10% Testing ( 1 Juni - 12 Juni )
 
 # Tech Stack
 
