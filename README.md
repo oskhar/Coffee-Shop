@@ -1,6 +1,6 @@
 # Coffee-Shop
 
-Project untuk UMKM dengan proses developing yang sesuai standar yang baik dan penerapan prinsip prinsip programming atau sederhananya best practice.
+Project untuk UMKM dengan proses developing sesuai standar yang baik dan penerapan prinsip prinsip programming atau sederhananya best practice.
 
 # Rencana dan Penjadwalan
 
