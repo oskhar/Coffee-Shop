@@ -4,20 +4,23 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Paths
+    | Domain Path
     |--------------------------------------------------------------------------
     |
-    | This value contains paths to the layers of the application in the context
-    | of domain driven design, relative to the base folder of the application.
+    | The path to the domain folder relative to the application root.
     |
     */
+    'domain_path' => 'app/Domain',
 
-    'paths' => [
-        //
-        // Path to the Domain layer.
-        //
-        'domains' => 'app/Domain',
-    ],
+    /*
+    |--------------------------------------------------------------------------
+    | Domain Namespace
+    |--------------------------------------------------------------------------
+    |
+    | The root domain namespace.
+    |
+    */
+    'domain_namespace' => 'Domain',
 
     /*
     |--------------------------------------------------------------------------
@@ -28,38 +31,39 @@ return [
     | objects relative to the domain namespace of which the object
     | belongs to.
     |
-    | e.g., Domain/Invoicing/Models/*
-    |       Domain/Invoicing/Data/*
-    |       Domain/Invoicing/ViewModels/*
-    |       Domain/Invoicing/ValueObjects/*
-    |       Domain/Invoicing/Actions/*
+    | e.g., Domain\Invoicing\Models\*
+    |       Domain\Invoicing\Data\*
+    |       Domain\Invoicing\ViewModels\*
+    |       Domain\Invoicing\ValueObjects\*
+    |       Domain\Invoicing\Actions\*
     |
     */
     'namespaces' => [
-        //
-        // Models
-        //
-        'models' => 'Models',
-
-        //
-        // Data Transfer Objects (DTO)
-        //
-        'data_transfer_objects' => 'Data',
-
-        //
-        // View Models
-        //
-        'view_models' => 'ViewModels',
-
-        //
-        // Value Objects
-        //
-        'value_objects' => 'ValueObjects',
-
-        //
-        // Actions
-        //
-        'actions' => 'Actions',
+        'model' => 'Models',
+        'data_transfer_object' => 'Data',
+        'view_model' => 'ViewModels',
+        'value_object' => 'ValueObjects',
+        'action' => 'Actions',
+        'cast' => 'Casts',
+        'class' => '',
+        'channel' => 'Channels',
+        'command' => 'Commands',
+        'enum' => 'Enums',
+        'event' => 'Events',
+        'exception' => 'Exceptions',
+        'factory' => 'Database\Factories',
+        'interface' => '',
+        'job' => 'Jobs',
+        'listener' => 'Listeners',
+        'mail' => 'Mail',
+        'notification' => 'Notifications',
+        'observer' => 'Observers',
+        'policy' => 'Policies',
+        'provider' => 'Providers',
+        'resource' => 'Resources',
+        'rule' => 'Rules',
+        'scope' => 'Scopes',
+        'trait' => '',
     ],
 
     /*
@@ -110,4 +114,50 @@ return [
     |
     */
     'base_action' => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Autoloading
+    |--------------------------------------------------------------------------
+    |
+    | Configure whether domain providers, commands, policies, and factories
+    | should be auto-discovered and registered.
+    |
+    */
+    'autoload' => [
+        /**
+         * When enabled, any class within the domain layer extending `Illuminate\Support\ServiceProvider`
+         * will be auto-registered as a service provider
+         */
+        'providers' => true,
+
+        /**
+         * When enabled, any class within the domain layer extending `Illuminate\Console\Command`
+         * will be auto-registered as a command when running in console.
+         */
+        'commands' => true,
+
+        /**
+         * When enabled, the package will register a custom policy discovery callback to resolve policy names
+         * for domain models, and fallback to Laravel's default for all other cases.
+         */
+        'policies' => true,
+
+        /**
+         * When enabled, the package will register a custom factory discovery callback to resolve factory names
+         * for domain models, and fallback to Laravel's default for all other cases.
+         */
+        'factories' => true,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Caching
+    |--------------------------------------------------------------------------
+    |
+    | The folder where the domain cache files will be stored. Used for domain
+    | autoloading.
+    |
+    */
+    'cache_directory' => 'bootstrap/cache/ddd',
 ];

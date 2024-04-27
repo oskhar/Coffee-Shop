@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1d9006fa5e8211e66971532ce82188c",
+    "content-hash": "b5f337f261f5481ee1d713bb3171cba4",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3072,35 +3072,183 @@
             "time": "2023-11-24T15:40:42+00:00"
         },
         {
-            "name": "lunarstorm/laravel-ddd",
-            "version": "v0.9.0",
+            "name": "lorisleiva/laravel-actions",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/lunarstorm/laravel-ddd.git",
-                "reference": "1cfaa38ff35f5817c07939c0f23f64cbf063be58"
+                "url": "https://github.com/lorisleiva/laravel-actions.git",
+                "reference": "d5c2ca544f40d85f877b38eb6d23e9c967ecb69f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lunarstorm/laravel-ddd/zipball/1cfaa38ff35f5817c07939c0f23f64cbf063be58",
-                "reference": "1cfaa38ff35f5817c07939c0f23f64cbf063be58",
+                "url": "https://api.github.com/repos/lorisleiva/laravel-actions/zipball/d5c2ca544f40d85f877b38eb6d23e9c967ecb69f",
+                "reference": "d5c2ca544f40d85f877b38eb6d23e9c967ecb69f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0|^11.0",
+                "lorisleiva/lody": "^0.5",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^9.0",
+                "pestphp/pest": "^1.23|^2.34",
+                "phpunit/phpunit": "^9.6|^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lorisleiva\\Actions\\ActionServiceProvider"
+                    ],
+                    "aliases": {
+                        "Action": "Lorisleiva\\Actions\\Facades\\Actions"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lorisleiva\\Actions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loris Leiva",
+                    "email": "loris.leiva@gmail.com",
+                    "homepage": "https://lorisleiva.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel components that take care of one specific task",
+            "homepage": "https://github.com/lorisleiva/laravel-actions",
+            "keywords": [
+                "action",
+                "command",
+                "component",
+                "controller",
+                "job",
+                "laravel",
+                "object"
+            ],
+            "support": {
+                "issues": "https://github.com/lorisleiva/laravel-actions/issues",
+                "source": "https://github.com/lorisleiva/laravel-actions/tree/v2.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/lorisleiva",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-13T12:47:32+00:00"
+        },
+        {
+            "name": "lorisleiva/lody",
+            "version": "v0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lorisleiva/lody.git",
+                "reference": "c2f51b070e99f3a240d66cf68ef1f232036917fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lorisleiva/lody/zipball/c2f51b070e99f3a240d66cf68ef1f232036917fe",
+                "reference": "c2f51b070e99f3a240d66cf68ef1f232036917fe",
                 "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^9.0|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^9.0",
+                "pestphp/pest": "^1.20|^2.34",
+                "phpunit/phpunit": "^9.5.10|^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lorisleiva\\Lody\\LodyServiceProvider"
+                    ],
+                    "aliases": {
+                        "Lody": "Lorisleiva\\Lody\\Lody"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lorisleiva\\Lody\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Loris Leiva",
+                    "email": "loris.leiva@gmail.com",
+                    "homepage": "https://lorisleiva.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Load files and classes as lazy collections in Laravel.",
+            "homepage": "https://github.com/lorisleiva/lody",
+            "keywords": [
+                "classes",
+                "collection",
+                "files",
+                "laravel",
+                "load"
+            ],
+            "support": {
+                "issues": "https://github.com/lorisleiva/lody/issues",
+                "source": "https://github.com/lorisleiva/lody/tree/v0.5.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/lorisleiva",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-13T12:08:59+00:00"
+        },
+        {
+            "name": "lunarstorm/laravel-ddd",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lunarstorm/laravel-ddd.git",
+                "reference": "0897d40d78b85d32896a9f646e2ea05a40b7c00c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lunarstorm/laravel-ddd/zipball/0897d40d78b85d32896a9f646e2ea05a40b7c00c",
+                "reference": "0897d40d78b85d32896a9f646e2ea05a40b7c00c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.25|^11.0",
+                "laravel/prompts": "^0.1.16",
+                "lorisleiva/lody": "^0.5.0",
                 "php": "^8.1|^8.2|^8.3",
                 "spatie/laravel-package-tools": "^1.13.0"
             },
             "require-dev": {
                 "larastan/larastan": "^2.0.1",
                 "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^6.0|^7.0|^8.1",
-                "orchestra/testbench": "^7|^8|^9.0",
-                "pestphp/pest": "^1.22|^2.0",
-                "pestphp/pest-plugin-laravel": "^1.1|^2.0",
+                "nunomaduro/collision": "^7.0|^8.1",
+                "orchestra/testbench": "^8|^9.0",
+                "pestphp/pest": "^2.34",
+                "pestphp/pest-plugin-laravel": "^2.0",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpunit/phpunit": "^9.5|^10"
+                "phpstan/phpstan-phpunit": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -3141,9 +3289,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lunarstorm/laravel-ddd/issues",
-                "source": "https://github.com/lunarstorm/laravel-ddd/tree/v0.9.0"
+                "source": "https://github.com/lunarstorm/laravel-ddd/tree/v1.1.0"
             },
-            "time": "2024-03-11T16:57:24+00:00"
+            "time": "2024-04-07T16:58:20+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7186,6 +7334,73 @@
                 }
             ],
             "time": "2024-02-15T11:33:06+00:00"
+        },
+        {
+            "name": "thejano/laravel-domain-driven-design",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thejano/laravel-domain-driven-design.git",
+                "reference": "8e5b9a7d35e06775992af84ffd625faae0e4a309"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thejano/laravel-domain-driven-design/zipball/8e5b9a7d35e06775992af84ffd625faae0e4a309",
+                "reference": "8e5b9a7d35e06775992af84ffd625faae0e4a309",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.0|^11.0",
+                "php": "^8.1|^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.6",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TheJano\\LaravelDomainDrivenDesign\\LaravelDomainDrivenDesignServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TheJano\\LaravelDomainDrivenDesign\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dr Pshtiwan",
+                    "email": "drpshtiwan@thejano.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Helps to use domain driven design within laravel",
+            "homepage": "https://github.com/thejano/laravel-domain-driven-design",
+            "keywords": [
+                "Domain Driven Design",
+                "TheJano",
+                "dd",
+                "ddd",
+                "design",
+                "domain",
+                "domain-driven-design",
+                "drivem",
+                "laravel",
+                "laravel ddd",
+                "laravel-domain-driven-design"
+            ],
+            "support": {
+                "issues": "https://github.com/thejano/laravel-domain-driven-design/issues",
+                "source": "https://github.com/thejano/laravel-domain-driven-design/tree/1.1.0"
+            },
+            "time": "2024-03-20T13:26:08+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
