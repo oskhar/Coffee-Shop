@@ -12,7 +12,7 @@ class DeleteTokenAction
 
     public function handle()
     {
-        Auth::logout();
+        Auth::user()->tokens()->delete();
     }
 
     public function asController(): JsonResponse
