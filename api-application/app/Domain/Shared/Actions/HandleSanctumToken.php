@@ -6,7 +6,6 @@ use Closure;
 use Domain\Shared\Exceptions\UnauthorizedException;
 use Domain\Shared\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class HandleSanctumToken
 {
